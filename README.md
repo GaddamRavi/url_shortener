@@ -26,6 +26,7 @@ A simple URL shortener API built using Flask. This application provides endpoint
    cd url_shortener
 2.Install dependencies
 --->pip install -r requirements.txt
+
 3.Run the application:
 --->python app.py
 
@@ -37,6 +38,7 @@ Shorten a URL:
 '''POST /shorten
   Content-Type: application/json
   Body: {"url": "https://example.com"}'''
+  
 5.Redirect to Original URL:
 for ex:
     C:\Users\20l31\OneDrive\Desktop\url_shortener>curl -X POST http://127.0.0.1:5000/shorten -H "Content-Type: application/json" -d "{\"url\":\"https://example.com\"}"
@@ -46,13 +48,16 @@ for ex:
 }
 
 C:\Users\20l31\OneDrive\Desktop\url_shortener>curl http://127.0.0.1:5000/c984d0
+
 6.##### using this you can access linK:http://127.0.0.1:5000/c984d0 ######
+
 7.View Metrics:
 C:\Users\20l31\OneDrive\Desktop\url_shortener>curl http://127.0.0.1:5000/metrics    ###  use this to know Write a metrics API that returns top 3 domain names that have been shortened the most
 number of times.
 {
   "example.com": 1
 }
+
 8.Using Docker
 --->Build the Docker image:
 --->docker build -t url_shortener .
