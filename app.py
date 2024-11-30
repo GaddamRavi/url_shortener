@@ -3,7 +3,6 @@ from collections import Counter
 import hashlib
 
 app = Flask(__name__)
-
 url_mapping = {}
 domain_counter = Counter()
 @app.route('/', methods=['GET'])
